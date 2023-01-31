@@ -2,6 +2,8 @@ import React from "react";
 import Logo from './lotswhite.png';
 
 const Navbar = () => {
+
+  
   return (
     <div className="text-white  bg-blue-900 border-b grid sm:grid-cols-1 sm:my-auto md:grid-cols-12">
       <div className="invisible md:visible  md:col-span-2 ml-11 my-auto ">

@@ -3,7 +3,7 @@ import Logo from '../navbar/lotswhite.png';
 
 const Footer = () => {
   return (
-    <div className='md:grid sm:grid-flow-row md:grid-cols-3  text-white font-sans px-8 pt-20 bg-blue-900 mb-10'>
+    <div className='md:grid sm:grid-flow-row md:grid-cols-3  text-white font-sans px-8 pt-20 bg-blue-900 '>
       {/**First col with the logo */}
       <div className='col-span-1 pb-6 '>
         <img src={Logo} alt="Lots logo" className="w-28 pb-3 "/>

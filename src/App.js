@@ -1,16 +1,23 @@
 import './App.css';
 
-import {Footer, Hero, Navbar, NewsLetter, ShowCase,  TryLots} from './components';
+import {Footer, Hero, Navbar, NewsLetter, ShowCase,  TryLots, Login} from './components';
 
 function App() {
+  const user ="null";
   return (
     <div className='' >
-      <Navbar/>
+      {!user?(<Login/>
+      ):(
+        <>
+        <Navbar/>
       <Hero/>
       <ShowCase/>
       <NewsLetter/>
       <TryLots/>
       <Footer/>
+        </>
+      )}
+      
     </div>
   );
 }

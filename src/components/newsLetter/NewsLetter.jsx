@@ -1,4 +1,5 @@
 import React from 'react';
+import ForwardToInboxOutlinedIcon from '@mui/icons-material/ForwardToInboxOutlined';
 
 const NewsLetter = () => {
   return (
@@ -11,7 +12,7 @@ const NewsLetter = () => {
       </div>
       {/**Button and a text flied at the left */}
       <div className='justify-center md:justify-end flex'>
-        <div ><input className='py-2.5 mr-4  px-4 rounded-sm text-sm bg-gray-100 placeholder:text-slate-400 text-black border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1' placeholder='Enter your email' /></div>
+        <div className='flex py-2.5 mr-4  px-4 rounded-sm text-sm bg-gray-100 placeholder:text-slate-400 text-black border border-slate-300 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1'><ForwardToInboxOutlinedIcon className=' stroke-slate-400'/><input className='pl-2 border-white focus:outline-none focus:border-none focus:ring-sky-500 focus:ring-none' placeholder='Enter your email' /></div>
         <div><button className='py-2.5 bg-blue-900 text-md text-white hover:bg-slate-800 delay-100 mx-3 px-6 rounded-sm  ' >Join our Newsletter </button></div>
       </div>
     </div>
