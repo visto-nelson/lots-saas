@@ -1,16 +1,9 @@
 import React from 'react'
-//import {auth, provider} from "../../firebase";
+import {signIn} from "../../firebase";
+
+
 
 function Login() {
-
-   /* const signIn = () => {
-
-        auth.signInWithPopup(provider)
-        .then((result)=> {
-            console.log(result);
-        })
-        .catch((error) => alert(error.message));
-    }*/
 
   return (
     <div className="relative flex flex-col bg-blue-600 justify-center min-h-screen overflow-hidden">
@@ -55,7 +48,7 @@ function Login() {
                         </button>
                     </div>
                     <div className="mt-6">
-                        <button type='submit' onClick={"signIn"} className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
+                        <button  onClick={signIn} className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
                             Sign In with Google Account
                         </button>
                     </div>

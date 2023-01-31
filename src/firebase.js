@@ -1,5 +1,5 @@
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
+import {initializeApp} from 'firebase/app';
+import {getAuth, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAjrJ6vXOUHmzcGkgj60ytu3w5jofz-pmk",
@@ -10,10 +10,17 @@ const firebaseConfig = {
   appId: "1:1052834242160:web:2e3148dc65658c67a41eb5"
 };
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-const db = firebaseApp.firestore();
-const auth = firebase.auth();
-const provider = new firebase.auth().GoogleAuthProvider();
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
-export { auth, provider };
-export default db;
+export const signIn = () => {
+
+    signInWithPopup(auth, provider)
+    .then((result)=> {
+        console.log(result);
+        
+    })
+    .catch((error) => alert(error.message));
+}
+
